@@ -23,6 +23,9 @@ module.exports = function(grunt) {
 		// Minify main & package js files.
 		uglify: {
 			dist: {
+				options: {
+					sourceMap: true	
+				},
 				files: {
 					'lib/js/package.min.js': ['lib/js/package.js'],
 					'lib/js/main.min.js': ['lib/js/main.js']
