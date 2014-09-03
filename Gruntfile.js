@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 	
 	var port = grunt.option('port');
+	    defaultPort = 8888;
 
 	// Config
 	grunt.initConfig({
@@ -48,7 +49,7 @@ module.exports = function(grunt) {
 		// Serve working directory to port 8888.
 		shell: {
 			serve: {
-				command: 'python -m SimpleHTTPServer ' + port
+				command: 'python -m SimpleHTTPServer ' + ( port || defaultPort )
 			}
 		},
 
